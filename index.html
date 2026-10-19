@@ -435,6 +435,22 @@ body.editing .bk .num{z-index:6}
 .il .w1{left:150px;top:116px;font-size:46px}
 .il .w2{left:228px;top:246px;font-size:60px}
 .il .w3{left:136px;top:386px;font-size:66px}
+/* ---------- responsif Safari iPad/iPhone ---------- */
+html,body{width:100%;min-width:0;overscroll-behavior:none}
+body{min-height:100%;touch-action:pan-y}
+button,.turn{touch-action:manipulation}
+@supports (height: 100dvh){
+  html,body{height:100dvh}
+}
+@media (max-width:700px){
+  .bar-ui{bottom:max(8px,env(safe-area-inset-bottom));max-width:calc(100vw - 12px);gap:2px;padding:5px 6px}
+  .bar-ui button{font-size:11px;padding:8px 9px}
+  .bar-ui .lab{min-width:80px;font-size:11px}
+  .rotate-hint{top:max(8px,env(safe-area-inset-top))}
+}
+@media (orientation:portrait) and (max-width:700px){
+  .rotate-hint{max-width:560px;margin:0 auto}
+}
 @media (prefers-reduced-motion:reduce){
   .leaf,.shift{transition-duration:.01s}
   .floater,.rip,.lp,.ring{animation:none}
@@ -518,7 +534,7 @@ body.editing .bk .num{z-index:6}
        <p class="b" data-k="cv-b">with all my heart</p>
        <div class="ph"><div class="photo gray" data-p="cv-photo"></div></div>
        <p class="c" data-k="cv-c">sincerely yours,</p>
-       <p class="d" data-k="cv-d">your name</p>
+       <p class="d" data-k="cv-d">Adriani Shofiy</p>
        <button class="turn next" aria-label="Buka zine"></button>
      </div>
      <div class="face back cal">
@@ -578,10 +594,10 @@ body.editing .bk .num{z-index:6}
        <h2 class="tt" data-k="th-t">21 Things I Love About You...</h2>
        <span class="it" style="left:127px;top:80px" data-k="th-1">your smile</span>
        <span class="it" style="left:39px;top:108px" data-k="th-2">your laugh</span>
-       <span class="it" style="left:121px;top:122px" data-k="th-3">your passion for your hobbies</span>
+       <span class="it" style="left:121px;top:122px" data-k="th-3">your passion</span>
        <span class="it" style="left:255px;top:157px" data-k="th-4">your kindness</span>
        <span class="it" style="left:58px;top:168px;white-space:normal;width:150px" data-k="th-5">How you remember little things about me</span>
-       <span class="it" style="left:210px;top:200px" data-k="th-6">your cooking</span>
+       <span class="it" style="left:210px;top:200px" data-k="th-6">your eyes</span>
        <span class="it" style="left:70px;top:222px" data-k="th-7">our inside jokes</span>
        <span class="it" style="left:265px;top:236px" data-k="th-8">your voice</span>
        <span class="it" style="left:148px;top:256px" data-k="th-9">your silly jokes</span>
@@ -623,11 +639,11 @@ body.editing .bk .num{z-index:6}
        <div class="cv5" style="left:278px;top:198px"><div class="photo" data-p="sg-4"></div><b>04</b></div>
        <div class="cv5" style="left:300px;top:281px"><div class="photo" data-p="sg-5"></div><b>05</b></div>
        <div class="trk">
-         <div class="r"><i>01</i><span data-k="tl-1">Song title - Artist</span></div>
-         <div class="r"><i>02</i><span data-k="tl-2">Song title - Artist</span></div>
-         <div class="r"><i>03</i><span data-k="tl-3">Song title - Artist</span></div>
-         <div class="r"><i>04</i><span data-k="tl-4">Song title - Artist</span></div>
-         <div class="r"><i>05</i><span data-k="tl-5">Song title - Artist</span></div>
+         <div class="r"><i>01</i><span data-k="tl-1">Lucky (feat. Colbie Caillat) - Jason Mraz</span></div>
+         <div class="r"><i>02</i><span data-k="tl-2">Blessed - Daniel Caesar</span></div>
+         <div class="r"><i>03</i><span data-k="tl-3">Buzz - NIKI</span></div>
+         <div class="r"><i>04</i><span data-k="tl-4">One Only - Pamungkas</span></div>
+         <div class="r"><i>05</i><span data-k="tl-5">Honeybee - Olivia Rodrigo</span></div>
        </div>
        <button class="turn prev" aria-label="Halaman sebelumnya"></button>
      </div>
@@ -696,9 +712,6 @@ body.editing .bk .num{z-index:6}
          <svg class="fl" style="left:28px" viewBox="0 0 24 44" aria-hidden="true"><path d="M12 2C6 12 4 20 12 28 20 20 18 12 12 2z" fill="#ff9a2e"/><path d="M12 12C9 18 9 22 12 26 15 22 15 18 12 12z" fill="#ffe27a"/><path d="M12 28V42" stroke="#f6e6dc" stroke-width="3" stroke-linecap="round"/></svg>
          <svg class="fl" style="left:140px" viewBox="0 0 24 44" aria-hidden="true"><path d="M12 2C6 12 4 20 12 28 20 20 18 12 12 2z" fill="#ff9a2e"/><path d="M12 12C9 18 9 22 12 26 15 22 15 18 12 12z" fill="#ffe27a"/><path d="M12 28V42" stroke="#f6e6dc" stroke-width="3" stroke-linecap="round"/></svg>
          <div class="num" data-k="bk-num">21</div>
-         <div class="fc"><div class="photo" data-p="bk-face"></div>
-           <svg class="hat" viewBox="0 0 30 36" aria-hidden="true"><path d="M15 2L27 32H3Z" fill="#f6a5b5"/><path d="M9 20L21 14M7 27L24 20" stroke="#fff" stroke-width="3"/><circle cx="15" cy="3" r="3" fill="#ffd45a"/></svg>
-         </div>
        </div>
        <span class="w" style="left:20%;top:66%" data-k="bk-5">zine</span>
        <span class="w" style="left:66%;top:70%" data-k="bk-6">with</span>
@@ -771,7 +784,7 @@ body.editing .bk .num{z-index:6}
   var tt;function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show')},2600)}
 
   $$('[data-k]').forEach(function(el){var k=el.getAttribute('data-k');if(store.t[k]!=null)el.textContent=store.t[k]});
-  var DEF={"cal-photo": "images/cal-photo.jpg", "bw-p1": "images/bw-p1.jpg", "bw-p2": "images/bw-p2.jpg", "pb-1": "images/pb-1.jpg", "pb-2": "images/pb-2.jpg", "pb-3": "images/pb-3.jpg", "sg-1": "images/sg-1.jpg", "sg-2": "images/sg-2.jpg", "sg-3": "images/sg-3.jpg", "sg-4": "images/sg-4.jpg", "st-photo": "images/st-photo.jpg", "fv-1": "images/fv-1.jpg", "fv-2": "images/fv-2.jpg", "fv-3": "images/fv-3.jpg", "fv-4": "images/fv-4.jpg", "fv-5": "images/fv-5.jpg", "fv-6": "images/fv-6.jpg", "cm-photo": "images/cm-photo.jpg"};
+  var DEF={"cal-photo":"images/cal-photo.jpg","bw-p1":"images/bw-p1.jpg","bw-p2":"images/bw-p2.jpg","pb-1":"images/pb-1.jpg","pb-2":"images/pb-2.jpg","pb-3":"images/pb-3.jpg","sg-1":"images/sg-1.jpg","sg-2":"images/sg-2.jpg","sg-3":"images/sg-3.jpg","sg-4":"images/sg-4.jpg","st-photo":"images/st-photo.jpg","fv-1":"images/fv-1.jpg","fv-2":"images/fv-2.jpg","fv-3":"images/fv-3.jpg","fv-4":"images/fv-4.jpg","fv-5":"images/fv-5.jpg","fv-6":"images/fv-6.jpg","cm-photo":"images/cm-photo.jpg","cv-photo":"images/cv-photo.jpg","sg-5":"images/sg-5.jpg"};
   var POS={"cal-photo": "62% 40%", "bw-p1": "45% 38%", "bw-p2": "50% 33%", "pb-1": "53% 40%", "pb-2": "70% 45%", "pb-3": "50% 33%", "sg-1": "50% 50%", "sg-2": "50% 50%", "sg-3": "50% 50%", "sg-4": "50% 50%", "st-photo": "55% 45%", "fv-1": "70% 45%", "fv-2": "62% 40%", "fv-3": "48% 35%", "fv-4": "50% 33%", "fv-5": "53% 40%", "fv-6": "55% 45%", "cm-photo": "48% 35%"};
   $$('[data-p]').forEach(function(el){var k=el.getAttribute('data-p');var u=store.p[k]||DEF[k];if(u)el.style.backgroundImage='url('+u+')';if(POS[k])el.style.backgroundPosition=POS[k]});
 
@@ -957,12 +970,24 @@ body.editing .bk .num{z-index:6}
   /* ---------- skala layar ---------- */
   var hintClosed=false;
   function fit(){
-    var s=Math.min((innerWidth-16)/860,(innerHeight-92)/620);s=Math.max(.25,Math.min(s,1.7));
+    /* Pakai ukuran viewport yang benar-benar terlihat di Safari/iPadOS.
+       Ukuran buku aslinya 800 x 560 px; jangan menghitung ruang ekstra
+       yang membuat halaman terpotong di layar kecil. */
+    var vw=(window.visualViewport && window.visualViewport.width) || document.documentElement.clientWidth || window.innerWidth;
+    var vh=(window.visualViewport && window.visualViewport.height) || document.documentElement.clientHeight || window.innerHeight;
+    var availableW=Math.max(240,vw-24);
+    var availableH=Math.max(220,vh-132); /* sisakan ruang untuk toolbar bawah */
+    var s=Math.min(availableW/800,availableH/560,1.7);
+    s=Math.max(.28,s);
     $('#scaler').style.transform='scale('+s+')';
-    var narrow=innerWidth<innerHeight&&innerWidth<700;
+    var narrow=vw<vh&&vw<700;
     $('#rotateHint').style.display=(narrow&&!hintClosed)?'block':'none';
   }
   $('#hintX').addEventListener('click',function(){hintClosed=true;fit()});
+  if(window.visualViewport){
+    window.visualViewport.addEventListener('resize',fit);
+    window.visualViewport.addEventListener('scroll',fit);
+  }
     /* ---------- login pemilik dan sinkron foto online ---------- */
   // Isi tiga nilai ini setelah membuat project Supabase. Jangan pakai secret/service-role key.
   var SUPABASE_URL='PASTE_PROJECT_URL_HERE';
